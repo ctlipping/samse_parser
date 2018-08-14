@@ -19,6 +19,8 @@ class SamseEvent:
         self.duration = has_star_ongoing + str(self.duration_td)
     
     def __repr__(self):
+        """ Returns a more internally useful string representation of a SamseEvent
+            void --> str """
         return "SamseEvent({0},{1},{2},{3},{4},{5},{6},{7})".format(self.node_name, self.partition,
                                                                    self.down_date, self.up_date.strip(),
                                                                    self.state, self.reason.strip(),
@@ -26,6 +28,8 @@ class SamseEvent:
 
 
     def __str__(self):
+        """ Returns an easier to understand string representation of a SamseEvent
+            void --> str """
         return "{0} {1}-{2} {3} {4} {5}".format(self.node_name, self.down_date, self.up_date.strip(),
                                                 self.state, self.reason.strip(), self.duration)
 
